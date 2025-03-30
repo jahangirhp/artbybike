@@ -20,19 +20,16 @@
   <link rel="stylesheet" href="assets/css/templatemo-eduwell-style.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
-  <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
-  <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
-  <!--
+  <!-- Amplify Storage (for S3 uploads) -->
+  <script src="https://cdn.jsdelivr.net/npm/@aws-amplify/storage@4.0.0/dist/aws-amplify-storage.min.js"></script>
 
-TemplateMo 573 EduWell
+  <!-- Your custom JavaScript -->
+  <script src="assets/js/app.js"></script>
 
-https://templatemo.com/tm-573-eduwell
 
--->
 </head>
 
 <body>
-
 
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
@@ -73,17 +70,21 @@ https://templatemo.com/tm-573-eduwell
             <h2>Convert traveled track into <em>ART!</em></h2>
           </div>
 
+        <div class=" uploader-container">
+          <h3 class="uploader-title text-center">Upload Your GPS device File</h3>
+        
           <form id="upload-form">
-            <input type="file" id="file-input" accept=".gpx">
-            <button type="submit">Upload GPX File</button>
-        </form>
-        <p id="upload-status"></p>
-
-          <form action="/file-upload" class="dropzone" id="my-awesome-dropzone">
+              <div class="file-input-wrapper">
+                  <span class="file-input-label">Drag & Drop or Click to Select a GPX File</span>
+                  <input type="file" id="file-input" accept=".gpx" required>
+              </div>
+              <div class="text-center">
+                  <button type="submit" class="main-button-gradient">Upload Now</button>
+              </div>
           </form>
-          <div class="center-child margin-20">
-            <button class="main-button-gradient" type="submit">Submit GPX File</button>
-          </div>
+          <p id="upload-status" class="upload-status text-center"></p>
+      </div>
+      
 
         </div>
         <div class="col-lg-6 center-child">
