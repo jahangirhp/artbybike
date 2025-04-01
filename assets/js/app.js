@@ -1,8 +1,3 @@
-import { Amplify, Storage } from 'aws-amplify';
-import awsExports from './aws-exports'; // Ensure your AWS config is imported
-Amplify.configure(awsExports);
-
-
 
 // Configure Amplify Storage (replace with AWS account actual values)
 Amplify.configure({
@@ -14,6 +9,9 @@ Amplify.configure({
         }
     }
 });
+
+
+  
 
 // DOM elements
 const uploadForm = document.getElementById('upload-form');

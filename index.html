@@ -20,11 +20,7 @@
   <link rel="stylesheet" href="assets/css/templatemo-eduwell-style.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/lightbox.css">
-  <!-- Amplify Storage (for S3 uploads) -->
-  <script src="https://cdn.jsdelivr.net/npm/@aws-amplify/storage@4.0.0/dist/aws-amplify-storage.min.js"></script>
-
-  <!-- Your custom JavaScript -->
-  <script src="assets/js/app.js"></script>
+  
 
 
 </head>
@@ -299,6 +295,9 @@
   </section>
 
   <!-- Scripts -->
+     <!-- Amplify Storage (for S3 uploads) -->
+    <script src="https://cdn.jsdelivr.net/npm/aws-amplify@4.3.46/dist/aws-amplify.min.js"></script>
+
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -310,6 +309,11 @@
   <script src="assets/js/video.js"></script>
   <script src="assets/js/slick-slider.js"></script>
   <script src="assets/js/custom.js"></script>
+   
+  <!--  custom JavaScript -->
+  <script src="assets/js/app.js" ></script>
+
+
   <script>
     //according to loftblog tut
     $('.nav li:first').addClass('active');
@@ -357,6 +361,14 @@
       checkSection();
     });
   </script>
+
+<script>
+  console.log("Script loading order:");
+  Array.from(document.scripts).forEach(script => {
+    console.log(script.src ? script.src.split('/').pop() : "Inline script");
+  });
+  console.log("Amplify exists?", typeof Amplify !== 'undefined');
+</script>
 </body>
 
 </html>
