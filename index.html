@@ -296,8 +296,8 @@
 
   <!-- Scripts -->
      <!-- Amplify Storage (for S3 uploads) -->
-    <script src="https://cdn.jsdelivr.net/npm/aws-amplify@4.3.46/dist/aws-amplify.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@aws-amplify/storage@4.0.0/dist/aws-amplify-storage.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aws-amplify@4.3.10/dist/aws-amplify.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@aws-amplify/storage@4.3.10/dist/aws-amplify-storage.min.js"></script>
     
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -362,14 +362,6 @@
       checkSection();
     });
   </script>
-
-<script>
-  console.log("Script loading order:");
-  Array.from(document.scripts).forEach(script => {
-    console.log(script.src ? script.src.split('/').pop() : "Inline script");
-  });
-  console.log("Amplify exists?", typeof Amplify !== 'undefined');
-</script>
 </body>
 
 </html>
