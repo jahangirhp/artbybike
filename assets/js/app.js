@@ -1,14 +1,6 @@
-// Wait for the DOM and scripts to load
-document.addEventListener('DOMContentLoaded', () => {
-    // Check if Amplify is defined
-    if (typeof window.Amplify === 'undefined') {
-        console.error('Amplify is not defined. Ensure aws-amplify.min.js is loaded correctly.');
-        return;
-    }
+// Import Amplify and Storage (only needed in modern JS frameworks)
 
-    // Log to confirm Amplify is loaded
-    console.log('Amplify:', window.Amplify);
-    console.log('Storage:', window.Storage);
+const { Amplify, Storage } = window.aws_amplify;
 
     // Configure Amplify Storage
     window.Amplify.configure({
@@ -80,4 +72,3 @@ document.addEventListener('DOMContentLoaded', () => {
             uploadStatus.style.color = '#dc3545';
         }
     });
-});
