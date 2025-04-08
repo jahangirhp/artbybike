@@ -1,1 +1,4 @@
-node_modules
+# Ignore backend files (optional)
+server.js
+.env
+node_modules/
