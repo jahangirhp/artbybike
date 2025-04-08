@@ -99,6 +99,11 @@ figcaption {
   outline: 0;
 }
 
+.upload-status
+{
+  color: red;
+}
+
 .clearfix:after {
   content: ".";
   display: block;
