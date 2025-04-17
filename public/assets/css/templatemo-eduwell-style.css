@@ -265,6 +265,9 @@ Uploader styles
 global styles
 --------------------------------------------- 
 */
+
+.row
+{margin:0}
 html,
 body {
   background: #fff;
